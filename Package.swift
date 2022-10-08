@@ -34,14 +34,13 @@ let package = Package(
         .testTarget(
             name: "UnicodeNamesTests",
             dependencies: ["UnicodeNames"]),
+        .target(
+            name: "UnicodeData",
+            //dependencies: ["UnicodeNames"],
+            resources: [
+                .process("UnicodeData/flatUnicode.txt"),
+                .process("UnicodeData/glyphNamesToUnicodeAndCategories.txt")]
+        ),
         
-            .target(
-                    name: "UnicodeData",
-                    dependencies: ["UnicodeNames"],
-                    resources: [
-                        .process("UnicodeData/flatUnicode.txt"),
-                        .process("UnicodeData/glyphNamesToUnicodeAndCategories.txt")]
-                ),
-
     ]
 )
