@@ -33,8 +33,16 @@ let package = Package(
             ]),
         .testTarget(
             name: "UnicodeNamesTests",
-            dependencies: ["UnicodeNames"])
+            dependencies: ["UnicodeNames"]),
         
-       
+        .target(
+            name: "flatUnicode.txt",
+            dependencies: []),
+        
+        // Define the target for the package.
+        .target(
+            name: "glyphNamesToUnicodeAndCategories.txt",
+            dependencies: []),
+        
     ]
 )
