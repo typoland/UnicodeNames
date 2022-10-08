@@ -37,7 +37,7 @@ let package = Package(
         
             .target(
                     name: "UnicodeData",
-                    //path: "UnicodeData",
+                    dependencies: ["UnicodeNames"],
                     resources: [
                         .process("UnicodeData/flatUnicode.txt"),
                         .process("UnicodeData/glyphNamesToUnicodeAndCategories.txt")]
