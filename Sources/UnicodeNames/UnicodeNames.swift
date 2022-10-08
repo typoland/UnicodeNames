@@ -53,7 +53,8 @@ public final class UnicodeNames {
     public static func prepareData() {
         let t = Date()
         Task {
-            if let namesFlatPath = Bundle.main.path(forResource: "glyphNamesToUnicodeAndCategories", ofType: "txt") {
+            let bundle = Bundle(for: Self.self)
+            if let namesFlatPath = bundle.path(forResource: "glyphNamesToUnicodeAndCategories", ofType: "txt") {
                 
                 do {
                     let names = try String(contentsOfFile: namesFlatPath).split(separator: "\n")
@@ -74,7 +75,7 @@ public final class UnicodeNames {
             } else {
                 fatalError("broken names file")
             }
-            if let unicodeFlatFilePath = Bundle.main.path(forResource: "flatUnicode", ofType: "txt") {
+            if let unicodeFlatFilePath = bundle.path(forResource: "flatUnicode", ofType: "txt") {
                 do {
                     
                     let unicodeFlat = try String(contentsOfFile: unicodeFlatFilePath).split(separator: "\n")
