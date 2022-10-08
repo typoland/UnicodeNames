@@ -30,17 +30,19 @@ let package = Package(
             name: "UnicodeNames",
             dependencies: [
                 .product(name: "Collections", package: "swift-collections")
-            ]),
-        .testTarget(
-            name: "UnicodeNamesTests",
-            dependencies: ["UnicodeNames"]),
-        .target(
-            name: "UnicodeData",
-            //dependencies: ["UnicodeNames"],
+            ],
             resources: [
                 .process("UnicodeData/flatUnicode.txt"),
                 .process("UnicodeData/glyphNamesToUnicodeAndCategories.txt")]
         ),
+        .testTarget(
+            name: "UnicodeNamesTests",
+            dependencies: ["UnicodeNames"]),
+//        .target(
+//            name: "UnicodeNames",
+//            //dependencies: ["UnicodeNames"],
+//
+//        ),
         
     ]
 )
