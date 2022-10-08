@@ -32,8 +32,8 @@ let package = Package(
                 .product(name: "Collections", package: "swift-collections")
             ],
             resources: [
-                .copy("Resources/flatUnicode.txt"),
-                .copy("Resources/glyphNamesToUnicodeAndCategories.txt")]
+                .copy("flatUnicode.txt"),
+                .copy("glyphNamesToUnicodeAndCategories.txt")]
         ),
         .testTarget(
             name: "UnicodeNamesTests",
