@@ -54,7 +54,7 @@ public final class UnicodeNames {
         let t = Date()
         Task {
             let bundle = Bundle(for: Self.self)
-            print (bundle)
+            print (bundle,"\npath:", bundle.bundlePath)
             if let namesFlatPath = bundle.path(forResource: "glyphNamesToUnicodeAndCategories", ofType: "txt") {
                 
                 do {
