@@ -37,12 +37,12 @@ let package = Package(
         
         .target(
             name: "flatUnicode.txt",
-            dependencies: []),
+            dependencies: ["UnicodeNames"]),
         
         // Define the target for the package.
         .target(
             name: "glyphNamesToUnicodeAndCategories.txt",
-            dependencies: []),
+            dependencies: ["UnicodeNames"]),
         
     ]
 )
