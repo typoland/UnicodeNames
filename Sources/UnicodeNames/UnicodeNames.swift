@@ -18,6 +18,8 @@ public extension Character {
     }
 }
 
+let unicodeNamesBundle = Bundle.module
+
 public final class UnicodeNames {
     
     public enum Case {
@@ -53,7 +55,7 @@ public final class UnicodeNames {
     public static func prepareData() {
         let t = Date()
         Task {
-            let bundle = Bundle(for: Self.self)
+            let bundle = unicodeNamesBundle
             print (bundle,"\npath:", bundle.bundlePath)
             if let namesFlatPath = bundle.path(forResource: "glyphNamesToUnicodeAndCategories", ofType: "txt") {
                 
