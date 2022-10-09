@@ -30,7 +30,8 @@ let package = Package(
                 .product(name: "Collections", package: "swift-collections")
             ],
             resources: [
-                .copy("UnicodeData")
+                .process("flatUnicode.txt"),
+                .process("glyphNamesToUnicodeAndCategories.txt"),
             ]
             
         ),
